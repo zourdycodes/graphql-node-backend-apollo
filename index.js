@@ -8,6 +8,7 @@ const { MONGODB } = require("./config.js");
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  context: ({ req }) => ({ req }),
 });
 
 mongoose
@@ -21,5 +22,4 @@ mongoose
   });
 
 // time being
-
-// drink your fuckin bourbon before the ice metls => hurry up
+// drink your fucking bourbon before the ice melts => hurry up

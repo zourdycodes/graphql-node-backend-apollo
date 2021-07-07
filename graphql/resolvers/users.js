@@ -1,6 +1,6 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const { UserInputError } = require("apollo-server");
+const { UserInputError } = require("apollo-server"); // handling errors
 
 const {
   validateRegisterInput,
@@ -98,5 +98,20 @@ module.exports = {
         token,
       };
     },
+    // async createPost(_, { body }, context) {
+    //   const user = checkAuth(context);
+    //   console.log(user);
+
+    //   const newPost = new Post({
+    //     body,
+    //     user: user.id,
+    //     username: user.username,
+    //     createdAt: new Date().toISOString(),
+    //   });
+
+    //   const post = await newPost.save();
+
+    //   return post;
+    // },
   },
 };
