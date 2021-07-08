@@ -25,3 +25,4 @@ mongoose
 
 // time being
 // drink your fucking bourbon before the ice melts => hurry up
+// it's a general demand of living
