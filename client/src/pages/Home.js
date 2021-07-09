@@ -35,9 +35,9 @@ export const Home = () => {
   } = useQuery(FETCH_POSTS_QUERY);
 
   return (
-    <Grid columns={3} divided stackable>
+    <Grid columns={1} divided stackable>
       <Grid.Row className="page-title">
-        <h1 className="heading">Some Recent Posts</h1>
+        <h1 className="heading">Recent Posts</h1>
       </Grid.Row>
       <Grid.Row className="distance">
         {loading ? (
