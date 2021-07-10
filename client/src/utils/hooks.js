@@ -15,6 +15,7 @@ export const useForm = (callback, initialState = {}) => {
       email: "",
       password: "",
       confirmPassword: "",
+      body: "",
     });
   };
 
