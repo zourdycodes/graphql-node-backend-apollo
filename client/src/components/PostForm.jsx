@@ -30,19 +30,29 @@ export const PostForm = () => {
   }
 
   return (
-    <Form onSubmit={onSubmit}>
-      <h1>Hello</h1>
-      <Form.Field>
-        <Form.Input
-          placeholder="What's going on?"
-          name="body"
-          onChange={onChange}
-          value={values.body}
-        />
-        <Button color="teal" type="submit">
-          <Icon name="paper plane" color="white" /> Post
-        </Button>
-      </Form.Field>
-    </Form>
+    <>
+      <Form onSubmit={onSubmit}>
+        <h1>Hello</h1>
+        <Form.Field>
+          <Form.Input
+            placeholder="What's going on?"
+            name="body"
+            onChange={onChange}
+            value={values.body}
+            error={error ? true : false}
+          />
+          <Button color="teal" type="submit">
+            <Icon name="paper plane" color="white" /> Post
+          </Button>
+        </Form.Field>
+      </Form>
+      {error && (
+        <div className="ui error message">
+          <ul className="list">
+            <li>{error.graphQLErrors?.[0].message}</li>
+          </ul>
+        </div>
+      )}
+    </>
   );
 };
